@@ -1,0 +1,51 @@
+:root {
+  --bleu: #2563eb;
+  --fond: #f8fafc;
+  --texte: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, "SF Pro Text", "Segoe UI", sans-serif;
+  background: var(--fond);
+  color: var(--texte);
+  /* évite que le contenu passe sous l'encoche / la barre système du téléphone */
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+button {
+  background: var(--bleu);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+.status {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
