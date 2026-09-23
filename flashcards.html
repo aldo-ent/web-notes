@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcards</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <a class="back-link" href="index.html">← Accueil</a>
+    <h1>Flashcards</h1>
+
+    <div class="controls">
+      <select id="deck-select"></select>
+      <button id="direction-btn">Sens : Kana → Romaji</button>
+    </div>
+
+    <p class="progress" id="progress-text"></p>
+
+    <div class="card" id="card" tabindex="0">
+      <span id="card-face">…</span>
+    </div>
+
+    <p class="hint">Touche la carte pour retourner</p>
+
+    <div class="answer-buttons" id="answer-buttons" hidden>
+      <button class="btn-again" id="btn-again">À revoir</button>
+      <button class="btn-know" id="btn-know">Je savais</button>
+    </div>
+  </main>
+
+  <script src="js/flashcards.js"></script>
+</body>
+</html>

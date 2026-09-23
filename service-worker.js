@@ -6,11 +6,15 @@ const CACHE_NAME = "web-notes-v2";
 const FILES_TO_CACHE = [
   "./",
   "./index.html",
+  "./flashcards.html",
   "./css/style.css",
   "./js/app.js",
+  "./js/flashcards.js",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
+  "./data/decks/index.json",
+  "./data/decks/kana-hiragana.json",
 ];
 
 // Étape 1 : à l'installation, on télécharge et on stocke tous les fichiers
