@@ -3,5 +3,15 @@
     "id": "kana-hiragana",
     "title": "Hiragana",
     "file": "decks/kana-hiragana.json"
+  },
+  {
+    "id": "kana-katakana",
+    "title": "Katakana",
+    "file": "decks/kana-katakana.json"
+  },
+  {
+    "id": "kanji-base",
+    "title": "Kanji de base",
+    "file": "decks/kanji-base.json"
   }
 ]
