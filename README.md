@@ -167,6 +167,43 @@ C'est tout — pas de build, pas de compte développeur, pas d'App Store.
 
 ---
 
+## 8. Module Flashcards
+
+La page `flashcards.html` charge des "decks" (paquets de cartes) depuis `data/decks/`.
+
+### Structure
+
+```
+data/decks/
+├── index.json              → liste des decks disponibles (id, titre, fichier)
+└── kana-hiragana.json      → contenu d'un deck (liste de cartes front/back)
+```
+
+### Ajouter un nouveau deck (ex. katakana, vocabulaire, formules de physique...)
+
+1. Crée un fichier `data/decks/mon-deck.json` sur ce modèle :
+   ```json
+   {
+     "title": "Mon Deck",
+     "cards": [
+       { "id": "1", "front": "Question ou recto", "back": "Réponse ou verso" }
+     ]
+   }
+   ```
+2. Ajoute-le dans `data/decks/index.json` :
+   ```json
+   { "id": "mon-deck", "title": "Mon Deck", "file": "decks/mon-deck.json" }
+   ```
+3. Ajoute son chemin dans `FILES_TO_CACHE` (`service-worker.js`) et **augmente le numéro de version** (`v2` → `v3`).
+4. `git add . && git commit -m "Ajout deck X" && git push`.
+
+### Comment ça fonctionne
+
+- Le bouton en haut de la carte inverse le sens (utile pour kana→romaji vs romaji→kana ; pour d'autres matières tu peux ignorer ce bouton).
+- Toucher la carte la retourne.
+- "À revoir" / "Je savais" enregistre la progression **en local sur cet appareil uniquement** (`localStorage`) — les cartes non sues repassent en priorité au prochain tour.
+- ⚠️ Cette progression n'est **pas synchronisée** entre ton Mac et ton téléphone : seul le contenu des decks (les fichiers JSON) est partagé via GitHub. Si tu veux plus tard une progression synchronisée, il faudra un vrai backend (au-delà du hosting statique gratuit).
+
 ## Pour aller plus loin
 
 - Remplace les icônes dans `icons/` par les tiennes (192×192 et 512×512 px, format PNG).
