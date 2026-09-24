@@ -86,12 +86,28 @@ code .
 Structure des fichiers :
 ```
 pwa-app-demo/
-├── index.html          → la page principale
-├── manifest.json        → décrit l'app (nom, icône, couleurs) pour l'installation
-├── service-worker.js    → gère le cache hors-ligne et les mises à jour
-├── css/style.css        → le style
-├── js/app.js             → la logique + l'enregistrement du service worker
-└── icons/                → icônes (192px et 512px), à remplacer par les tiennes
+├── index.html            → page d'accueil (grille des sujets)
+├── manifest.json         → décrit l'app (nom, icône, couleurs) pour l'installation
+├── service-worker.js     → gère le cache hors-ligne et les mises à jour
+├── css/style.css         → le style
+├── js/
+│   ├── app.js              → logique de la page d'accueil + service worker
+│   ├── flashcards.js       → logique des flashcards
+│   ├── notes.js            → chargement/rendu markdown + LaTeX
+│   ├── markdown-it.min.js  → librairie de rendu markdown (hébergée localement)
+│   ├── katex.min.js        → librairie de rendu LaTeX
+│   └── auto-render.min.js  → détection automatique des formules $...$ dans la page
+├── lib/katex/
+│   ├── katex.min.css       → styles KaTeX (reste avec fonts/, chemins relatifs)
+│   └── fonts/               → polices KaTeX (.woff2)
+├── pages/                 → toutes les pages sauf l'accueil
+│   ├── flashcards.html
+│   ├── japonais.html
+│   └── allemand.html
+├── data/
+│   ├── decks/               → contenu des flashcards (JSON)
+│   └── notes/                → notes de grammaire (Markdown + LaTeX)
+└── icons/                  → icônes (192px et 512px)
 ```
 
 ---

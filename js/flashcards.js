@@ -40,7 +40,7 @@ function saveProgress(deckId, progress) {
 
 // --- Chargement des decks disponibles ---
 async function init() {
-  const res = await fetch("data/decks/index.json");
+  const res = await fetch("../data/decks/index.json");
   decks = await res.json();
 
   deckSelect.innerHTML = decks
@@ -53,7 +53,7 @@ async function init() {
 
 async function loadDeck(deckId) {
   const meta = decks.find((d) => d.id === deckId);
-  const res = await fetch(`data/${meta.file}`);
+  const res = await fetch(`../data/${meta.file}`);
   const data = await res.json();
   currentDeck = { id: meta.id, title: meta.title, cards: data.cards };
 
@@ -138,7 +138,7 @@ directionBtn.addEventListener("click", () => {
 // --- Enregistrement du service worker (comme sur la page d'accueil) ---
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("service-worker.js").catch(console.error);
+    navigator.serviceWorker.register("../service-worker.js").catch(console.error);
   });
 }
 

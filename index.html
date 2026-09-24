@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web-Notes</title>
+  <title>Mon App</title>
 
   <!-- Ce fichier dit au téléphone "cette app peut être installée" -->
   <link rel="manifest" href="manifest.json" />
@@ -21,13 +21,38 @@
 <body>
 
   <main class="container">
-    <h1>👋 Web Notes</h1>
-    <p>Ceci est le point de départ de ton app. Modifie ce fichier, pousse tes changements, et ils apparaîtront sur ton téléphone.</p>
+    <h1>👋 Mon App</h1>
+    <p>Choisis un sujet pour accéder à tes notes.</p>
 
-    <button id="counter-btn">Cliqué 0 fois</button>
-
-    <nav class="home-nav">
-      <a class="nav-card" href="flashcards.html">📇 Flashcards</a>
+    <nav class="subject-grid">
+      <a class="subject-card" href="pages/maths.html" data-available="false">
+        <span class="subject-icon">📐</span>
+        <span class="subject-name">Maths</span>
+        <span class="subject-badge">Bientôt</span>
+      </a>
+      <a class="subject-card" href="pages/physique.html" data-available="false">
+        <span class="subject-icon">⚛️</span>
+        <span class="subject-name">Physique</span>
+        <span class="subject-badge">Bientôt</span>
+      </a>
+      <a class="subject-card" href="pages/chimie.html" data-available="false">
+        <span class="subject-icon">🧪</span>
+        <span class="subject-name">Chimie</span>
+        <span class="subject-badge">Bientôt</span>
+      </a>
+      <a class="subject-card" href="pages/informatique.html" data-available="false">
+        <span class="subject-icon">💻</span>
+        <span class="subject-name">Informatique</span>
+        <span class="subject-badge">Bientôt</span>
+      </a>
+      <a class="subject-card" href="pages/japonais.html" data-available="true">
+        <span class="subject-icon">🇯🇵</span>
+        <span class="subject-name">Japonais</span>
+      </a>
+      <a class="subject-card" href="pages/allemand.html" data-available="true">
+        <span class="subject-icon">🇩🇪</span>
+        <span class="subject-name">Allemand</span>
+      </a>
     </nav>
 
     <p class="status" id="status"></p>

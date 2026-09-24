@@ -1,6 +1,6 @@
 {
-  "name": "Web-Notes",
-  "short_name": "web-notes",
+  "name": "Mon App",
+  "short_name": "MonApp",
   "description": "Une petite PWA de démo",
   "start_url": "./index.html",
   "scope": "./",
