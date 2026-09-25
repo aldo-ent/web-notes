@@ -1,7 +1,7 @@
 // ⚠️ IMPORTANT : change ce numéro de version à CHAQUE fois que tu modifies
 // l'app (html/css/js). C'est ce qui force le téléphone à télécharger
 // la nouvelle version au lieu de garder l'ancienne en cache.
-const CACHE_NAME = "mon-app-v6";
+const CACHE_NAME = "mon-app-v7";
 
 const FILES_TO_CACHE = [
   "./",
